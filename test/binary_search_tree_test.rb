@@ -39,6 +39,16 @@ class BinarySearchTreeTest < Minitest::Test
     assert_equal 1, tree.root.right_node.depth
   end
 
+  def test_it_can_insert_again_at_a_deeper_level
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    assert_equal 50, tree.root.left_node.right_node.score
+    assert_equal "Hannibal Buress: Animal Furnace", tree.root.left_node.right_node.title
+    assert_equal 2, tree.root.left_node. right_node.depth
+  end
+
 end
 
 # tree.insert(16, "Johnny English")
