@@ -16,11 +16,21 @@ class BinarySearchTreeTest < Minitest::Test
     assert_nil tree.root
   end
 
-  def test_it_can_insert_a_movie_with_title_and_score
+  def test_it_can_insert_a_movie_with_title_and_score_and_return_depth
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     assert_equal 61, tree.root.score
     assert_equal "Bill & Ted's Excellent Adventure", tree.root.title
+    assert_equal 0, tree.root.depth
   end
+
+  def test_it_can_insert_to_the_left
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    assert_equal 16, tree.root.left_node.score
+    assert_equal "Johnny English", tree.root.left_node.title
+    # assert_equal 1, tree.root.left_node.depth
+  end
+
 end
 
 # tree.insert(16, "Johnny English")

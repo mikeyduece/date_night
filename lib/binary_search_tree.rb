@@ -7,24 +7,28 @@ class BinarySearchTree
     @root = root
   end
 
-  def left
-    current = @root
-    current = current.left_node
-  end
-
-  def right
-    current = @root
-    current = current.right_node
-  end
-
-  def insert(score, title)
-    if root.nil?
-      @root = Node.new(score, title)
+  def insert(score, title, current_node=@root, level=0)
+    @level = level
+    if @root.nil?
+      @root = Node.new(score, title, @level)
+      @root.depth
     else
-      current = @root
-      left if root.score < score
-      right if root.score > score
+      @level += 1
+      if score < current_node.score
+        if current_node.left_node.nil?
+          current_node.left_node = Node.new(score, title, current_node, @level)
+          current_node.left_node.depth
+        else
+          insert(score, title, current_node.left_node, @level)
+        end
+      elsif score > current_node.score
+        if current_node.right_node.nil?
+          current_node.right_node = Node.new(score,title,current_node,@level).depth
+        else
+          insert(score, title, current_node.right_node,@level).depth
+        end
+      end
     end
-
   end
+
 end
