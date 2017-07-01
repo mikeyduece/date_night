@@ -49,11 +49,17 @@ class BinarySearchTreeTest < Minitest::Test
     assert_equal 2, tree.root.left_node. right_node.depth
   end
 
+  def test_it_can_include
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    assert tree.include?(16)
+  end
+
 end
 
-# tree.insert(16, "Johnny English")
-# # => 1
-# tree.insert(92, "Sharknado 3")
-# # => 1
-# tree.insert(50, "Hannibal Buress: Animal Furnace")
-# # => 2
+# tree.include?(16)
+# # => true
+# tree.include?(72)
+# # => false
