@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.1/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.1/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.1/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.1/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-01T13:42:39-06:00">2017-07-01T13:42:39-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-01T13:46:36-06:00">2017-07-01T13:46:36-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">82.76%</span></span>
+    (<span class="covered_percent"><span class="red">80.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.48
+         1.4
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>29</b> relevant lines. 
+    <b>30</b> relevant lines. 
     <span class="green"><b>24</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#c2f955492bfa4d732942673159cff9569f62df54" class="src_link" title="lib/binary_search_tree.rb">lib/binary_search_tree.rb</a></td>
-        <td class="red strong">75.0 %</td>
-        <td>34</td>
-        <td>20</td>
+        <td class="red strong">71.43 %</td>
+        <td>35</td>
+        <td>21</td>
         <td>15</td>
-        <td>5</td>
-        <td>1.2</td>
+        <td>6</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -89,11 +89,11 @@
         <div class="source_table" id="c2f955492bfa4d732942673159cff9569f62df54">
   <div class="header">
     <h3>lib/binary_search_tree.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="red">71.43 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
+      <b>21</b> relevant lines. 
       <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -211,7 +211,7 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">          current_node.left_node = Node.new(score, title, current_node, @level)</code>
+          <code class="ruby">          current_node.left_node = Node.new(score, title, @level, current_node)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
@@ -229,7 +229,7 @@
         <li class="missed" data-hits="0" data-linenumber="22">
           
           
-          <code class="ruby">          insert(score, title, current_node.left_node, @level)</code>
+          <code class="ruby">          insert(score, title, @level, current_node.left_node)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
@@ -253,52 +253,58 @@
         <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">          current_node.right_node = Node.new(score,title,current_node,@level).depth</code>
+          <code class="ruby">          current_node.right_node = Node.new(score, title, @level, current_node)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">          current_node.right_node.depth</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">        else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
           <code class="ruby">          insert(score, title, current_node.right_node,@level).depth</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>

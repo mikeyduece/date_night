@@ -16,14 +16,15 @@ class BinarySearchTree
       @level += 1
       if score < current_node.score
         if current_node.left_node.nil?
-          current_node.left_node = Node.new(score, title, current_node, @level)
+          current_node.left_node = Node.new(score, title, @level, current_node)
           current_node.left_node.depth
         else
-          insert(score, title, current_node.left_node, @level)
+          insert(score, title, @level, current_node.left_node)
         end
       elsif score > current_node.score
         if current_node.right_node.nil?
-          current_node.right_node = Node.new(score,title,current_node,@level).depth
+          current_node.right_node = Node.new(score, title, @level, current_node)
+          current_node.right_node.depth
         else
           insert(score, title, current_node.right_node,@level).depth
         end

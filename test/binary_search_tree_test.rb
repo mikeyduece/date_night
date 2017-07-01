@@ -28,7 +28,7 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(16, "Johnny English")
     assert_equal 16, tree.root.left_node.score
     assert_equal "Johnny English", tree.root.left_node.title
-    # assert_equal 1, tree.root.left_node.depth
+    assert_equal 1, tree.root.left_node.depth
   end
 
 end
