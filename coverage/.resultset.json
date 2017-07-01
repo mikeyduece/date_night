@@ -1,0 +1,22 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/mikeheft/turing/mod1/projects/date_night/lib/node.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        8,
+        8,
+        8,
+        8,
+        8,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1498933609
+  }
+}
