@@ -1,6 +1,38 @@
 {
   "Unit Tests": {
     "coverage": {
+      "/Users/mikeheft/turing/mod1/projects/date_night/lib/binary_search_tree.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/mikeheft/turing/mod1/projects/date_night/lib/node.rb": [
         1,
         1,
@@ -8,15 +40,15 @@
         null,
         null,
         1,
-        8,
-        8,
-        8,
-        8,
-        8,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ]
     },
-    "timestamp": 1498933609
+    "timestamp": 1498935369
   }
 }
