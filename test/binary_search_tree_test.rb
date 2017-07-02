@@ -49,7 +49,7 @@ class BinarySearchTreeTest < Minitest::Test
     assert_equal 2, tree.root.left_node. right_node.depth
   end
 
-  def test_it_can_include
+  def test_it_can_see_if_included
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
