@@ -60,12 +60,12 @@ class BinarySearchTree
       current_node.depth
     elsif score < current_node.score
       current_node = current_node.left_node
-      depth_of(num, current_node)
+      depth_of(score, current_node)
     elsif score > current_node.score
       current_node = current_node.right_node
-      depth_of(num, current_node)
+      depth_of(score, current_node)
     end
-
   end
+
 
 end
