@@ -46,7 +46,7 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(50, "Hannibal Buress: Animal Furnace")
     assert_equal 50, tree.root.left_node.right_node.score
     assert_equal "Hannibal Buress: Animal Furnace", tree.root.left_node.right_node.title
-    assert_equal 2, tree.root.left_node. right_node.depth
+    assert_equal 2, tree.root.left_node.right_node.depth
   end
 
   def test_it_can_see_if_included

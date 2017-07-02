@@ -1,6 +1,6 @@
 class Node
   attr_reader :score, :title
-  attr_accessor :depth, :left_node, :right_node
+  attr_accessor :depth, :right_node, :left_node
 
 
   def initialize(score,title,depth=nil,left_node=nil,right_node=nil)
