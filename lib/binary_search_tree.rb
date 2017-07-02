@@ -47,10 +47,25 @@ class BinarySearchTree
     elsif score < current_node.score
       current_node = current_node.left_node
       include?(score, current_node)
-    else
+    elsif score > current_node.score
       current_node = current_node.right_node
       include?(score, current_node)
     end
+  end
+
+  def depth_of(score,current_node=@root)
+    if current_node.nil?
+      return "That score does not exist"
+    elsif score == current_node.score
+      current_node.depth
+    elsif score < current_node.score
+      current_node = current_node.left_node
+      depth_of(num, current_node)
+    elsif score > current_node.score
+      current_node = current_node.right_node
+      depth_of(num, current_node)
+    end
+
   end
 
 end
