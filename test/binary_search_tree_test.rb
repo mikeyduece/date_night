@@ -57,6 +57,14 @@ class BinarySearchTreeTest < Minitest::Test
     assert tree.include?(16)
   end
 
+  def test_it_can_tell_if_not_included
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    refute tree.include?(72)
+  end
+
 end
 
 # tree.include?(16)

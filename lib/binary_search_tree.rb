@@ -34,18 +34,25 @@ class BinarySearchTree
   end
 
   def include?(score,current_node=@root)
-    if score == current_node.score
+    if @root.nil?
+      return false
+    elsif current_node.score == score
       return true
-    else
-      if score < current_node.score
-        if current_node.left_node != nil
-          include?(score, current_node.left_node)
-        end
-      elsif score > current_node.score
-        if current_node.right_node != nil
-          include?(score, current_node.right_node)
-        end
+    elsif score < current_node.score
+      current_node = current_node.left_node
+      if score == current_node
+        return true
+      else
+        include?(score, current_node)
       end
+    elsif score > current_node.score
+      current_node = current_node.right_node
+      if score == current_node.right_node
+        return true
+      else
+        include?(score, current_node)
+      end
+      return false
     end
   end
 
