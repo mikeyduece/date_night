@@ -65,6 +65,14 @@ class BinarySearchTreeTest < Minitest::Test
     refute tree.include?(72)
   end
 
+  def test_it_can_find_scoes_depth
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    assert_equal 0, tree.depth_of(61)
+  end
+
 end
 
 # tree.include?(16)

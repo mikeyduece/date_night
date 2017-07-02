@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-02T16:45:10-06:00">2017-07-02T16:45:10-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-02T16:57:07-06:00">2017-07-02T16:57:07-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.31
+         7.57
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>32</td>
         <td>31</td>
         <td>1</td>
-        <td>5.3</td>
+        <td>6.3</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>9.9</td>
+        <td>12.1</td>
       </tr>
       
     </tbody>
@@ -136,14 +136,14 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="7">
+          <span class="hits">9</span>
           
           <code class="ruby">    @root  = nil</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="8">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="8">
+          <span class="hits">9</span>
           
           <code class="ruby">    @level = 0</code>
         </li>
@@ -166,26 +166,26 @@
           <code class="ruby">  def insert(score, title, level=0, current_node=@root)</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="12">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="25" data-linenumber="12">
+          <span class="hits">25</span>
           
           <code class="ruby">    @level = level</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="13">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="25" data-linenumber="13">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @root.nil?</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="14">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="14">
+          <span class="hits">7</span>
           
           <code class="ruby">      @root = Node.new(score, title, @level)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="15">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="15">
+          <span class="hits">7</span>
           
           <code class="ruby">      @root.depth</code>
         </li>
@@ -196,32 +196,32 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="17">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="18" data-linenumber="17">
+          <span class="hits">18</span>
           
           <code class="ruby">      @level += 1</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="18">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="18" data-linenumber="18">
+          <span class="hits">18</span>
           
           <code class="ruby">      if score &lt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="19">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="19">
+          <span class="hits">9</span>
           
           <code class="ruby">        if current_node.left_node.nil?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="20">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="20">
+          <span class="hits">5</span>
           
           <code class="ruby">          current_node.left_node = Node.new(score, title, @level, current_node.left_node)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="21">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
           
           <code class="ruby">          current_node.depth</code>
         </li>
@@ -232,8 +232,8 @@
           <code class="ruby">        else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="23">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="23">
+          <span class="hits">4</span>
           
           <code class="ruby">          insert(score, title, @level, current_node.left_node)</code>
         </li>
@@ -244,26 +244,26 @@
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="25">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="25">
+          <span class="hits">9</span>
           
           <code class="ruby">      elsif score &gt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="26">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="26">
+          <span class="hits">9</span>
           
           <code class="ruby">        if current_node.right_node.nil?</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="27">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="27">
+          <span class="hits">9</span>
           
           <code class="ruby">          current_node.right_node = Node.new(score, title, @level, current_node.right_node)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="28">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="28">
+          <span class="hits">9</span>
           
           <code class="ruby">          current_node.depth</code>
         </li>
@@ -491,32 +491,32 @@
           <code class="ruby">  def initialize(score,title,depth=nil,left_node=nil,right_node=nil)</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="7">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="21" data-linenumber="7">
+          <span class="hits">21</span>
           
           <code class="ruby">    @score      = score</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="8">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="21" data-linenumber="8">
+          <span class="hits">21</span>
           
           <code class="ruby">    @title      = title</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="9">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="21" data-linenumber="9">
+          <span class="hits">21</span>
           
           <code class="ruby">    @depth      = depth</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="10">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="21" data-linenumber="10">
+          <span class="hits">21</span>
           
           <code class="ruby">    @left_node  = left_node</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="11">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="21" data-linenumber="11">
+          <span class="hits">21</span>
           
           <code class="ruby">    @right_node = right_node</code>
         </li>
