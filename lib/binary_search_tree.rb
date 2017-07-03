@@ -68,20 +68,22 @@ class BinarySearchTree
   end
 
   def max(current_node=@root)
+    data = {}
     if current_node.right_node != nil
       current_node = current_node.right_node
       max(current_node)
     else
-      current_node.score
+      data[current_node.title] = current_node.score
     end
   end
 
   def min(current_node=@root)
+    data = {}
     if current_node.left_node != nil
       current_node = current_node.left_node
       min(current_node)
     else
-      current_node.score
+      data[current_node.title] = current_node.score
     end
   end
 
