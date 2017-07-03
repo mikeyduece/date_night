@@ -83,9 +83,37 @@ class BinarySearchTreeTest < Minitest::Test
     assert_equal 2, tree.depth_of(50)
   end
 
-end
+  def test_it_can_tell_max_score
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    assert_equal 92, tree.max
+  end
 
-# tree.include?(16)
-# # => true
-# tree.include?(72)
-# # => false
+  def test_it_can_tell_a_different_max_score
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(99, "Hannibal Buress: Animal Furnace")
+    assert_equal 99, tree.max
+  end
+
+  def test_it_can_find_min_score
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    assert_equal 16, tree.min
+  end
+
+  def test_it_can_find_different_min_score
+    tree.insert(61, "Bill & Ted's Excellent Adventure")
+    tree.insert(16, "Johnny English")
+    tree.insert(92, "Sharknado 3")
+    tree.insert(50, "Hannibal Buress: Animal Furnace")
+    tree.insert(2, "Behind Enemy Lines")
+    assert_equal 2, tree.min
+  end
+
+end

@@ -53,7 +53,7 @@ class BinarySearchTree
     end
   end
 
-  def depth_of(score,current_node=@root)
+  def depth_of(score, current_node=@root)
     if current_node.nil?
       return "That score does not exist"
     elsif score == current_node.score
@@ -67,5 +67,22 @@ class BinarySearchTree
     end
   end
 
+  def max(current_node=@root)
+    if current_node.right_node != nil
+      current_node = current_node.right_node
+      max(current_node)
+    else
+      current_node.score
+    end
+  end
+
+  def min(current_node=@root)
+    if current_node.left_node != nil
+      current_node = current_node.left_node
+      min(current_node)
+    else
+      current_node.score
+    end
+  end
 
 end
