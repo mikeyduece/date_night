@@ -4,8 +4,8 @@ class BinarySearchTree
   attr_accessor :root
 
   def initialize
-    @root  = nil
-    @level = 0
+    @root   = nil
+    @level  = 0
   end
 
   def insert(score, title, level=0, current_node=@root)
@@ -34,12 +34,6 @@ class BinarySearchTree
   end
 
    def include?(score, current_node=@root)
-    # case current_node.score <=> score
-    # when 1  then include?(score, current_node.left_node)
-    # when -1 then include?(score, current_node.right_node)
-    # when 0  then return true
-    # end
-
     if current_node.nil?
       false
     elsif score == current_node.score
@@ -87,6 +81,10 @@ class BinarySearchTree
       data[current_node.title] = current_node.score
       data
     end
+  end
+
+  def sort(current_node=@root)
+
   end
 
 end

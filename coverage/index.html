@@ -14,26 +14,26 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-03T11:11:46-06:00">2017-07-03T11:11:46-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-03T13:05:38-06:00">2017-07-03T13:05:38-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.51%</span></span>
+    (<span class="covered_percent"><span class="green">98.94%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.21
+         8.64
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>67</b> relevant lines. 
-    <span class="green"><b>66</b> lines covered</span> and
+    <b>94</b> relevant lines. 
+    <span class="green"><b>93</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#c2f955492bfa4d732942673159cff9569f62df54" class="src_link" title="lib/binary_search_tree.rb">lib/binary_search_tree.rb</a></td>
-        <td class="green strong">98.28 %</td>
-        <td>92</td>
-        <td>58</td>
-        <td>57</td>
+        <td class="green strong">98.82 %</td>
+        <td>125</td>
+        <td>85</td>
+        <td>84</td>
         <td>1</td>
-        <td>8.1</td>
+        <td>6.8</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>23.8</td>
+        <td>26.0</td>
       </tr>
       
     </tbody>
@@ -89,10 +89,10 @@
         <div class="source_table" id="c2f955492bfa4d732942673159cff9569f62df54">
   <div class="header">
     <h3>lib/binary_search_tree.rb</h3>
-    <h4><span class="green">98.28 %</span> covered</h4>
+    <h4><span class="green">98.82 %</span> covered</h4>
     <div>
-      <b>58</b> relevant lines. 
-      <span class="green"><b>57</b> lines covered</span> and
+      <b>85</b> relevant lines. 
+      <span class="green"><b>84</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -136,517 +136,715 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="7">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="7">
+          <span class="hits">15</span>
           
-          <code class="ruby">    @root  = nil</code>
+          <code class="ruby">    @root   = nil</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="8">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="8">
+          <span class="hits">15</span>
           
-          <code class="ruby">    @level = 0</code>
+          <code class="ruby">    @level  = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="15" data-linenumber="9">
+          <span class="hits">15</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @sorted = []</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def insert(score, title, level=0, current_node=@root)</code>
         </li>
       
-        <li class="covered" data-hits="52" data-linenumber="12">
-          <span class="hits">52</span>
+        <li class="covered" data-hits="57" data-linenumber="13">
+          <span class="hits">57</span>
           
           <code class="ruby">    @level = level</code>
         </li>
       
-        <li class="covered" data-hits="52" data-linenumber="13">
-          <span class="hits">52</span>
+        <li class="covered" data-hits="57" data-linenumber="14">
+          <span class="hits">57</span>
           
           <code class="ruby">    if @root.nil?</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="14">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="13" data-linenumber="15">
+          <span class="hits">13</span>
           
           <code class="ruby">      @root = Node.new(score, title, @level)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="15">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="13" data-linenumber="16">
+          <span class="hits">13</span>
           
           <code class="ruby">      @root.depth</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="17">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="44" data-linenumber="18">
+          <span class="hits">44</span>
           
           <code class="ruby">      @level += 1</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="18">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="44" data-linenumber="19">
+          <span class="hits">44</span>
           
           <code class="ruby">      if score &lt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="19">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="20">
+          <span class="hits">22</span>
           
           <code class="ruby">        if current_node.left_node.nil?</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="20">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="21">
+          <span class="hits">12</span>
           
           <code class="ruby">          current_node.left_node = Node.new(score, title, @level, current_node.left_node)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="21">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="22">
+          <span class="hits">12</span>
           
           <code class="ruby">          current_node.depth</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">        else</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="23">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="24">
+          <span class="hits">10</span>
           
           <code class="ruby">          insert(score, title, @level, current_node.left_node)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="25">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="26">
+          <span class="hits">22</span>
           
           <code class="ruby">      elsif score &gt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="26">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="27">
+          <span class="hits">22</span>
           
           <code class="ruby">        if current_node.right_node.nil?</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="27">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="21" data-linenumber="28">
+          <span class="hits">21</span>
           
           <code class="ruby">          current_node.right_node = Node.new(score, title, @level, current_node.right_node)</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="28">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="21" data-linenumber="29">
+          <span class="hits">21</span>
           
           <code class="ruby">          current_node.depth</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">        else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
           <code class="ruby">          insert(score, title, @level, current_node.right_node)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
           <code class="ruby">   def include?(score, current_node=@root)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">    # case current_node.score &lt;=&gt; score</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">    # when 1  then include?(score, current_node.left_node)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">    # when -1 then include?(score, current_node.right_node)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">    # when 0  then return true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="43">
+        <li class="covered" data-hits="5" data-linenumber="38">
           <span class="hits">5</span>
           
           <code class="ruby">    if current_node.nil?</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
           <code class="ruby">      false</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="45">
+        <li class="covered" data-hits="4" data-linenumber="40">
           <span class="hits">4</span>
           
           <code class="ruby">    elsif score == current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">      true</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="47">
+        <li class="covered" data-hits="3" data-linenumber="42">
           <span class="hits">3</span>
           
           <code class="ruby">    elsif score &lt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="48">
+        <li class="covered" data-hits="2" data-linenumber="43">
           <span class="hits">2</span>
           
           <code class="ruby">      current_node = current_node.left_node</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="49">
+        <li class="covered" data-hits="2" data-linenumber="44">
           <span class="hits">2</span>
           
           <code class="ruby">      include?(score, current_node)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">    elsif score &gt; current_node.score</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      current_node = current_node.right_node</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      include?(score, current_node)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">      current_node = current_node.right_node</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      include?(score, current_node)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="54">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="55">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
-          
           <code class="ruby">  def depth_of(score, current_node=@root)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="57">
+        <li class="covered" data-hits="8" data-linenumber="52">
           <span class="hits">8</span>
           
           <code class="ruby">    if current_node.nil?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="58">
+        <li class="missed" data-hits="0" data-linenumber="53">
           
           
           <code class="ruby">      return &quot;That score does not exist&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="59">
+        <li class="covered" data-hits="8" data-linenumber="54">
           <span class="hits">8</span>
           
           <code class="ruby">    elsif score == current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="60">
+        <li class="covered" data-hits="4" data-linenumber="55">
           <span class="hits">4</span>
           
           <code class="ruby">      current_node.depth</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="61">
+        <li class="covered" data-hits="4" data-linenumber="56">
           <span class="hits">4</span>
           
           <code class="ruby">    elsif score &lt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="62">
+        <li class="covered" data-hits="2" data-linenumber="57">
           <span class="hits">2</span>
           
           <code class="ruby">      current_node = current_node.left_node</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="63">
+        <li class="covered" data-hits="2" data-linenumber="58">
           <span class="hits">2</span>
           
           <code class="ruby">      depth_of(score, current_node)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="64">
+        <li class="covered" data-hits="2" data-linenumber="59">
           <span class="hits">2</span>
           
           <code class="ruby">    elsif score &gt; current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="65">
+        <li class="covered" data-hits="2" data-linenumber="60">
           <span class="hits">2</span>
           
           <code class="ruby">      current_node = current_node.right_node</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="66">
+        <li class="covered" data-hits="2" data-linenumber="61">
           <span class="hits">2</span>
           
           <code class="ruby">      depth_of(score, current_node)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
           <code class="ruby">  def max(current_node=@root)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="71">
+        <li class="covered" data-hits="5" data-linenumber="66">
           <span class="hits">5</span>
           
           <code class="ruby">    data = {}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="72">
+        <li class="covered" data-hits="5" data-linenumber="67">
           <span class="hits">5</span>
           
           <code class="ruby">    if current_node.right_node != nil</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="73">
+        <li class="covered" data-hits="3" data-linenumber="68">
           <span class="hits">3</span>
           
           <code class="ruby">      current_node = current_node.right_node</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="74">
+        <li class="covered" data-hits="3" data-linenumber="69">
           <span class="hits">3</span>
           
           <code class="ruby">      max(current_node)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="70">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="76">
+        <li class="covered" data-hits="2" data-linenumber="71">
           <span class="hits">2</span>
           
           <code class="ruby">      data[current_node.title] = current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="77">
+        <li class="covered" data-hits="2" data-linenumber="72">
           <span class="hits">2</span>
           
           <code class="ruby">      data</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="74">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
           <code class="ruby">  def min(current_node=@root)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="82">
+        <li class="covered" data-hits="5" data-linenumber="77">
           <span class="hits">5</span>
           
           <code class="ruby">    data = {}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="83">
+        <li class="covered" data-hits="5" data-linenumber="78">
           <span class="hits">5</span>
           
           <code class="ruby">    if current_node.left_node != nil</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="84">
+        <li class="covered" data-hits="3" data-linenumber="79">
           <span class="hits">3</span>
           
           <code class="ruby">      current_node = current_node.left_node</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="85">
+        <li class="covered" data-hits="3" data-linenumber="80">
           <span class="hits">3</span>
           
           <code class="ruby">      min(current_node)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="87">
+        <li class="covered" data-hits="2" data-linenumber="82">
           <span class="hits">2</span>
           
           <code class="ruby">      data[current_node.title] = current_node.score</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="88">
+        <li class="covered" data-hits="2" data-linenumber="83">
           <span class="hits">2</span>
           
           <code class="ruby">      data</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
+        <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def sort</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    sort_left</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    sort_right</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="90">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @sorted</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def sort_right(current_node=@root)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="94">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    index = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="95">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    done = false</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="96">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    while done == false</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="97">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      if @sorted[index] == nil || current_node.score &lt; @sorted[index].values[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="98">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        @sorted.insert(index, {current_node.title =&gt; current_node.score})</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="99">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        done = true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="101">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      index += 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="103">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if current_node.right_node != nil</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sort_right(current_node.right_node)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="105">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="106">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @sorted</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def sort_left(current_node=@root)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="110">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    index = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="111">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    done = false</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="112">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    while done == false</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="113">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      if @sorted[index] == nil || current_node.score &lt; @sorted[index].values[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="114">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        @sorted.insert(index, {current_node.title =&gt; current_node.score})</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="115">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        done = true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="117">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      index += 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="119">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if current_node.left_node != nil</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sort_left(current_node.left_node)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="122">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @sorted</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
           
           
           <code class="ruby">end</code>
@@ -707,32 +905,32 @@
           <code class="ruby">  def initialize(score,title,depth=nil,left_node=nil,right_node=nil)</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="7">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="46" data-linenumber="7">
+          <span class="hits">46</span>
           
           <code class="ruby">    @score      = score</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="8">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="46" data-linenumber="8">
+          <span class="hits">46</span>
           
           <code class="ruby">    @title      = title</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="9">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="46" data-linenumber="9">
+          <span class="hits">46</span>
           
           <code class="ruby">    @depth      = depth</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="10">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="46" data-linenumber="10">
+          <span class="hits">46</span>
           
           <code class="ruby">    @left_node  = left_node</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="11">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="46" data-linenumber="11">
+          <span class="hits">46</span>
           
           <code class="ruby">    @right_node = right_node</code>
         </li>
