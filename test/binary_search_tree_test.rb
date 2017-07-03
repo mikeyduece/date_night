@@ -130,5 +130,10 @@ class BinarySearchTreeTest < Minitest::Test
     assert_equal sorted, tree.sort
   end
 
+  def test_it_can_load_a_file
+    tree.load("./movies.txt")
+    assert File.exists?("./movies.txt")
+  end
+
 
 end

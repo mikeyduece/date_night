@@ -94,4 +94,12 @@ class BinarySearchTree
     end
     @sorted
   end
+
+  def load(filename)
+    filename = "./movies.txt"
+    File.foreach filename do |line|
+      data = line.chomp.split(",")
+      insert(data[0], data[1])
+    end
+  end
 end
