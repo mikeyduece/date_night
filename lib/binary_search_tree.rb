@@ -74,6 +74,7 @@ class BinarySearchTree
       max(current_node)
     else
       data[current_node.title] = current_node.score
+      data
     end
   end
 
@@ -84,6 +85,7 @@ class BinarySearchTree
       min(current_node)
     else
       data[current_node.title] = current_node.score
+      data
     end
   end
 

@@ -88,7 +88,8 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
     tree.insert(50, "Hannibal Buress: Animal Furnace")
-    assert_equal 92, tree.max
+    data = {"Sharknado 3"=>92}
+    assert_equal data, tree.max
   end
 
   def test_it_can_tell_a_different_max_score
@@ -96,7 +97,8 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
     tree.insert(99, "Hannibal Buress: Animal Furnace")
-    assert_equal 99, tree.max
+    data = {"Hannibal Buress: Animal Furnace"=>99}
+    assert_equal data, tree.max
   end
 
   def test_it_can_find_min_score
@@ -104,7 +106,8 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
     tree.insert(50, "Hannibal Buress: Animal Furnace")
-    assert_equal 16, tree.min
+    data = {"Johnny English"=>16}
+    assert_equal data, tree.min
   end
 
   def test_it_can_find_different_min_score
@@ -113,7 +116,8 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(92, "Sharknado 3")
     tree.insert(50, "Hannibal Buress: Animal Furnace")
     tree.insert(2, "Behind Enemy Lines")
-    assert_equal 2, tree.min
+    data = {"Behind Enemy Lines"=>2}
+    assert_equal data, tree.min
   end
 
 end
