@@ -6,6 +6,7 @@ class BinarySearchTree
   def initialize
     @root   = nil
     @level  = 0
+    @sorted = []
   end
 
   def insert(score, title, level=0, current_node=@root)
@@ -84,7 +85,13 @@ class BinarySearchTree
   end
 
   def sort(current_node=@root)
-
+    if current_node.left_node != nil
+      sort(current_node.left_node)
+    end
+    @sorted << {current_node.title => current_node.score}
+    if current_node.right_node != nil
+      sort(current_node.right_node)
+    end
+    @sorted
   end
-
 end
