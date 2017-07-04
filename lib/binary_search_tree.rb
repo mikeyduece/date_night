@@ -96,10 +96,13 @@ class BinarySearchTree
   end
 
   def load(filename)
+    count = 0
     filename = "./movies.txt"
     File.foreach filename do |line|
       data = line.chomp.split(",")
-      insert(data[0], data[1])
+      insert(data[0].to_i, data[1])
+      count += 1
     end
+    count
   end
 end

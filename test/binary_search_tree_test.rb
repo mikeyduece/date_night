@@ -133,6 +133,8 @@ class BinarySearchTreeTest < Minitest::Test
   def test_it_can_load_a_file
     tree.load("./movies.txt")
     assert File.exists?("./movies.txt")
+    require "pry"; binding.pry
+    assert_equal 99, tree.load("./.movies.txt")
   end
 
 
