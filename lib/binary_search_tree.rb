@@ -9,100 +9,92 @@ class BinarySearchTree
     @sorted = []
   end
 
-  def insert(score, title, level=0, current_node=@root)
+  def insert(score, title, level = 0, current = @root)
     @level = level
     if @root.nil?
       @root = Node.new(score, title, @level)
       @root.depth
     else
       @level += 1
-      if score < current_node.score
-        if current_node.left_node.nil?
-          current_node.left_node = Node.new(score, title, @level, current_node.left_node)
-          current_node.depth
+      if score < current.score
+        if current.left.nil?
+          current.left = Node.new(score, title, @level, current.left)
+          current.depth
         else
-          insert(score, title, @level, current_node.left_node)
+          insert(score, title, @level, current.left)
         end
-      elsif score > current_node.score
-        if current_node.right_node.nil?
-          current_node.right_node = Node.new(score, title, @level, current_node.right_node)
-          current_node.depth
+      elsif score > current.score
+        if current.right.nil?
+          current.right = Node.new(score, title, @level, current.right)
+          current.depth
         else
-          insert(score, title, @level, current_node.right_node)
+          insert(score, title, @level, current.right)
         end
       end
     end
   end
 
-   def include?(score, current_node=@root)
-    if current_node.nil?
-      false
-    elsif score == current_node.score
-      true
-    elsif score < current_node.score
-      current_node = current_node.left_node
-      include?(score, current_node)
-    elsif score > current_node.score
-      current_node = current_node.right_node
-      include?(score, current_node)
+  def search(score, current = @root)
+    if current.nil?
+      return false
+    elsif score == current.score
+      current
+    elsif score < current.score
+      search(score, current.left)
+    elsif score > current.score
+      search(score, current.right)
     end
   end
 
-  def depth_of(score, current_node=@root)
-    if current_node.nil?
-      return "That score does not exist"
-    elsif score == current_node.score
-      current_node.depth
-    elsif score < current_node.score
-      current_node = current_node.left_node
-      depth_of(score, current_node)
-    elsif score > current_node.score
-      current_node = current_node.right_node
-      depth_of(score, current_node)
-    end
+  def include?(score)
+    search(score)
   end
 
-  def max(current_node=@root)
+  def depth_of(score)
+    search(score).depth
+  end
+
+  def max(current = @root)
     data = {}
-    if current_node.right_node != nil
-      current_node = current_node.right_node
-      max(current_node)
-    else
-      data[current_node.title] = current_node.score
-      data
+    until current.right.nil?
+      current = current.right
     end
+    data[current.title] = current.score
+    data
   end
 
-  def min(current_node=@root)
+  def min(current = @root)
     data = {}
-    if current_node.left_node != nil
-      current_node = current_node.left_node
-      min(current_node)
-    else
-      data[current_node.title] = current_node.score
-      data
+    until current.left.nil?
+      current = current.left
     end
+    data[current.title] = current.score
+    data
   end
 
-  def sort(current_node=@root)
-    if current_node.left_node != nil
-      sort(current_node.left_node)
+  def sort(current = @root)
+    if current.left != nil
+      sort(current.left)
     end
-    @sorted << {current_node.title => current_node.score}
-    if current_node.right_node != nil
-      sort(current_node.right_node)
+    @sorted << {current.title => current.score}
+    if current.right != nil
+      sort(current.right)
     end
     @sorted
   end
 
-  def load(filename)
-    count = 0
-    filename = "./movies.txt"
+  def load#(filename)
+    @count = 0
+    filename ||= "./movies.txt"
     File.foreach filename do |line|
-      data = line.chomp.split(",")
-      insert(data[0].to_i, data[1])
-      count += 1
+      data = line.chomp.split(",",2)
+      if include?(data[0].to_i) == true
+        nil
+      else
+        @count += 1
+        insert(data[0].to_i, data[1])
+      end
     end
-    count
+    @count
   end
 end

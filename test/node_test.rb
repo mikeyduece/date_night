@@ -28,14 +28,14 @@ class NodeTest < Minitest::Test
     assert_equal "Bill & Ted's Excellent Adventure", node.title
   end
 
-  def test_it_has_left_node_and_default_is_nil
+  def test_it_has_left_and_default_is_nil
     node = Node.new(61, "Bill & Ted's Excellent Adventure")
-    assert_nil node.left_node
+    assert_nil node.left
   end
 
-  def test_it_has_right_node_and_default_is_nil
+  def test_it_has_right_and_default_is_nil
     node = Node.new(61, "Bill & Ted's Excellent Adventure")
-    assert_nil node.right_node
+    assert_nil node.right
   end
 
   def test_it_has_depth
