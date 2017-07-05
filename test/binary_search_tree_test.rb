@@ -17,7 +17,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_insert_a_movie_with_title_and_score_and_return_depth
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     assert_equal 61, tree.root.score
     assert_equal "Bill & Ted's Excellent Adventure", tree.root.title
@@ -25,7 +24,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_insert_to_the_left
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     assert_equal 16, tree.root.left.score
@@ -34,7 +32,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_insert_to_the_right
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(92, "Sharknado 3")
     assert_equal 92, tree.root.right.score
@@ -43,7 +40,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_insert_again_at_a_deeper_level
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -54,7 +50,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_see_if_included
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -63,7 +58,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_tell_if_not_included
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -72,7 +66,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_find_scoes_depth
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -81,7 +74,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_find_other_depths
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -92,7 +84,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_tell_max_score
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -102,7 +93,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_tell_a_different_max_score
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -112,7 +102,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_find_min_score
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -122,7 +111,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_find_different_min_score
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -133,7 +121,6 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_sort
-    skip
     tree.insert(61, "Bill & Ted's Excellent Adventure")
     tree.insert(16, "Johnny English")
     tree.insert(92, "Sharknado 3")
@@ -144,11 +131,9 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_load_a_file
-    skip
-    tree.load#("./movies.txt")
+    tree.load
     assert File.exists?("./movies.txt")
-    # require "pry"; binding.pry
-    assert_equal 99, tree.load#("./movies.txt")
+    assert_equal 99, tree.load
   end
 
 

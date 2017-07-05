@@ -83,7 +83,7 @@ class BinarySearchTree
     @sorted
   end
 
-  def load#(filename)
+  def load
     @count = 0
     filename ||= "./movies.txt"
     File.foreach filename do |line|
