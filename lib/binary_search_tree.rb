@@ -9,7 +9,7 @@ class BinarySearchTree
     @sorted = []
   end
 
-  def insert(score, title, level = 0, current = @root)
+  def insert(score, title, level=0, current=@root)
     @level = level
     if @root.nil?
       @root = Node.new(score, title, @level)
@@ -34,7 +34,7 @@ class BinarySearchTree
     end
   end
 
-  def search(score, current = @root)
+  def search(score, current=@root)
     if current.nil?
       return false
     elsif score == current.score
@@ -46,15 +46,15 @@ class BinarySearchTree
     end
   end
 
-  def include?(score)
+  def include?(score, current=@root)
     search(score)
   end
 
-  def depth_of(score)
+  def depth_of(score, current=@root)
     search(score).depth
   end
 
-  def max(current = @root)
+  def max(current=@root)
     data = {}
     until current.right.nil?
       current = current.right
@@ -63,7 +63,7 @@ class BinarySearchTree
     data
   end
 
-  def min(current = @root)
+  def min(current=@root)
     data = {}
     until current.left.nil?
       current = current.left
@@ -72,7 +72,7 @@ class BinarySearchTree
     data
   end
 
-  def sort(current = @root)
+  def sort(current=@root)
     if current.left != nil
       sort(current.left)
     end
@@ -83,18 +83,18 @@ class BinarySearchTree
     @sorted
   end
 
-  def load
-    @count = 0
-    filename ||= "./movies.txt"
+  def load(filename)
+    count = 0
     File.foreach filename do |line|
       data = line.chomp.split(",",2)
       if include?(data[0].to_i) == true
         nil
       else
-        @count += 1
+        count += 1
         insert(data[0].to_i, data[1])
       end
     end
-    @count
+    count
   end
+
 end
