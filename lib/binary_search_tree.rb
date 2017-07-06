@@ -127,29 +127,29 @@ class BinarySearchTree
     # percentage = ((left+right)/@sorted.count)*100
   end
 
-  def find_left_kids(current,cdc=[])
-    return 0 if current.nil?
-    if current.left != nil
-      find_left_kids(current.left, cdc)
-    end
-    cdc << current.score
-    if current.right != nil
-      find_left_kids(current.right, cdc)
-    end
-    cdc
-  end
-
-  def find_right_kids(current=@root.right, usaid=[])
-    return 0 if current.nil?
-    usaid = []
-    until current.left != nil
-      find_right_kids(current.left)
-    end
-    usaid << current.score
-    until current.right != nil
-      find_right_kids(current.right)
-    end
-    usaid
-  end
+  # def find_left_kids(current,cdc=[])
+  #   return 0 if current.nil?
+  #   if current.left != nil
+  #     find_left_kids(current.left, cdc)
+  #   end
+  #   cdc << current.score
+  #   if current.right != nil
+  #     find_left_kids(current.right, cdc)
+  #   end
+  #   cdc
+  # end
+  #
+  # def find_right_kids(current=@root.right, usaid=[])
+  #   return 0 if current.nil?
+  #   usaid = []
+  #   until current.left != nil
+  #     find_right_kids(current.left)
+  #   end
+  #   usaid << current.score
+  #   until current.right != nil
+  #     find_right_kids(current.right)
+  #   end
+  #   usaid
+  # end
 
 end
