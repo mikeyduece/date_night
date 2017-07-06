@@ -50,8 +50,8 @@ class BinarySearchTree
     search(score)
   end
 
-  def depth_of(score, current=@root)
-    search(score).depth
+  def depth_of(depth, current=@root)
+    search(depth).depth
   end
 
   def max(current=@root)
@@ -84,17 +84,35 @@ class BinarySearchTree
   end
 
   def load(filename)
-    count = 0
+    @count = 0
     File.foreach filename do |line|
       data = line.chomp.split(",",2)
       if include?(data[0].to_i) == true
         nil
       else
-        count += 1
+        @count += 1
         insert(data[0].to_i, data[1])
       end
     end
-    count
+    @count
+  end
+
+  def health(level,current=@root)
+    require "pry"; binding.pry
+    health_arr = []
+    percentage = (find_left_kids(level)+find_right_kids(level)/@sorted.count)*100
+    # if current.right != nil
+    #   cdc << sort
+    # end
+    # cdc
+  end
+
+  def find_left_kids(level,current=@root)
+
+  end
+
+  def find_right_kids(level, current=@root)
+    
   end
 
 end
