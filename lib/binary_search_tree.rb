@@ -97,25 +97,38 @@ class BinarySearchTree
     @count
   end
 
+  def get_all_nodes(current, sug_array=[])
+    if current.left != nil
+      get_all_nodes(current.left,sug_array)
+    end
+    sug_array << current
+    if current.right != nil
+      get_all_nodes(current.right,sug_array)
+    end
+    sug_array
+  end
+
   def health(level,current=@root)
     sort
-    nih = []
-    until current.depth == level
-      current = current.left
+    nodes = get_all_nodes(current)
+    nodes_at_level = nodes.find_all do |node|
+      node.depth == level
     end
-    nih << find_left_kids
-    # require "pry"; binding.pry
-    # until current.depth == level
-    #   current = current.right
-    # end
-    # find_right_kids
+
+    nodes_under = nodes.find_all do |node|
+      node.depth > level
+    end
+
+    nodes_at_level.map do |node|
+      [node.score, nodes_under.count+1, (nodes_under.count.to_f/@sorted.count.to_f)*100]
+    end
+
+
     # percentage = ((left+right)/@sorted.count)*100
   end
 
-  def find_left_kids(current=@root.left, cdc=[])
+  def find_left_kids(current,cdc=[])
     return 0 if current.nil?
-
-    # @cdc = []
     if current.left != nil
       find_left_kids(current.left, cdc)
     end
@@ -126,17 +139,17 @@ class BinarySearchTree
     cdc
   end
 
-  def find_right_kids(current=@root.right)
+  def find_right_kids(current=@root.right, usaid=[])
     return 0 if current.nil?
-    @usaid = []
+    usaid = []
     until current.left != nil
       find_right_kids(current.left)
     end
-    @usaid << current.score
+    usaid << current.score
     until current.right != nil
       find_right_kids(current.right)
     end
-    @usaid
+    usaid
   end
 
 end

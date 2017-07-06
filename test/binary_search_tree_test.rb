@@ -144,7 +144,7 @@ class BinarySearchTreeTest < Minitest::Test
     tree.insert(86, "Charlie's Angels")
     tree.insert(38, "Charlie's Country")
     tree.insert(69, "Collateral Damage")
-    assert_equal [[98, 7, 100]], tree.health(1)
+    assert_equal [[98, 7, 100]], tree.health(0)
   end
 
 
