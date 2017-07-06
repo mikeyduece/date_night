@@ -98,21 +98,30 @@ class BinarySearchTree
   end
 
   def health(level,current=@root)
+    left = find_left_kids(level)
+    right = find_right_kids(level)
     require "pry"; binding.pry
-    health_arr = []
-    percentage = (find_left_kids(level)+find_right_kids(level)/@sorted.count)*100
-    # if current.right != nil
-    #   cdc << sort
-    # end
-    # cdc
+    percentage = ((left+right)/@sorted.count)*100
   end
 
-  def find_left_kids(level,current=@root)
-
+  def find_left_kids(level,current=@root.left)
+    cdc = []
+    if current != nil
+      find_left_kids(level,current.left)
+    end
+    cdc << current.score
+    if current != nil
+      find_left_kids(level, current.right)
+    end
+    cdc
   end
 
-  def find_right_kids(level, current=@root)
-    
+  def find_right_kids(level, current=@root.right)
+    cdc = []
+    if current != nil
+      find_right_kids(level,current.right)
+    end
+    cdc << current
   end
 
 end
