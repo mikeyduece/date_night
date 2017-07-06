@@ -137,6 +137,7 @@ class BinarySearchTreeTest < Minitest::Test
   end
 
   def test_it_can_determine_health
+    skip
     tree.insert(98, "Animals United")
     tree.insert(58, "Armageddon")
     tree.insert(36, "Bill & Ted's Bogus Journey")

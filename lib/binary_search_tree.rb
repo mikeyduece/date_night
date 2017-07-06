@@ -18,19 +18,25 @@ class BinarySearchTree
       @level += 1
       if score < current.score
         if current.left.nil?
-          current.left = Node.new(score, title, @level, current.left)
-          current.depth
+          make_babies(score, title, current, "left").depth
         else
           insert(score, title, @level, current.left)
         end
       elsif score > current.score
         if current.right.nil?
-          current.right = Node.new(score, title, @level, current.right)
-          current.depth
+          make_babies(score, title, current, "right").depth
         else
           insert(score, title, @level, current.right)
         end
       end
+    end
+  end
+
+  def make_babies(score, title, current, direction)
+    if direction == "left"
+      current.left = Node.new(score, title, @level)
+    elsif direction == "right"
+      current.right = Node.new(score, title, @level)
     end
   end
 
@@ -120,7 +126,7 @@ class BinarySearchTree
     end
 
     nodes_at_level.map do |node|
-      [node.score, nodes_under.count+1, (nodes_under.count.to_f/@sorted.count.to_f)*100]
+      [node.score, nodes_under.count+1, (nodes_under.count.to_f+1/@sorted.count.to_f)*100]
     end
 
 
